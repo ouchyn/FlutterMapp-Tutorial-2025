@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttermaptuto2025/views/pages/login_page.dart';
+import 'package:fluttermaptuto2025/views/pages/onboarding.dart';
 import 'package:lottie/lottie.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -44,7 +45,7 @@ class WelcomePage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(
                       builder: (context) {
-                        return LoginPage(title: 'Register Page',);
+                        return Onboarding(title: 'Onboarding');
                       },
                     ));
                   },

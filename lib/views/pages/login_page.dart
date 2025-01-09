@@ -84,11 +84,19 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+
   void onLoginPressed() {
-    if (confirmedEmail == controllerEmail.text && confirmedPW == controllerPW.text) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-        return WidgetTree();
-      },));
+    if (confirmedEmail == controllerEmail.text &&
+        confirmedPW == controllerPW.text) {
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return WidgetTree();
+          },
+        ),
+        (route) => false,
+      );
     }
   }
 }
